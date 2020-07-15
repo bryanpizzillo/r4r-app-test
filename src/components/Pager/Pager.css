@@ -1,0 +1,59 @@
+.r4r-pager.r4r-DEFAULT {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+}
+
+.r4r-pager__count.r4r-DEFAULT {
+    display: flex;
+    align-items: center;
+}
+
+.r4r-pager__count.r4r-DEFAULT p {
+    font-weight: bold;
+}
+
+.r4r-pager__nav.r4r-DEFAULT {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.pager__num.r4r-DEFAULT, .pager__arrow.r4r-DEFAULT {
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-weight: 400;
+    color: #2b7bba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 150ms linear;
+}
+
+.r4r-pager .pager__num.r4r-DEFAULT:focus, .r4r-pager .pager__arrow.r4r-DEFAULT:focus {
+    background: #cbe8fc;
+}
+
+.r4r-pager.r4r-DEFAULT .pager__num.r4r-DEFAULT, .r4r-pager.r4r-DEFAULT .pager__arrow.r4r-DEFAULT {
+    margin: 0 3px;
+}
+
+.pager__num.r4r-DEFAULT:hover, .pager__arrow.r4r-DEFAULT:hover {
+    background: #cbe8fc;
+}
+
+.pager__num.pager__ellipses:hover, .pager__num.pager__num--active:hover {
+    background: none;
+    cursor: default;
+}
+
+
+.r4r-pager.r4r-DEFAULT .pager__num--active.r4r-DEFAULT {
+    background: #2a71a5;
+    color: white;
+    cursor: default;
+    user-select: none;
+}

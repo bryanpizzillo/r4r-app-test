@@ -1,0 +1,218 @@
+.r4r-results.r4r-DEFAULT{
+    position: relative;
+}
+
+.r4r-results .notouch-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    user-select: none;
+    background: rgba(255,255,255,0.5);
+    left: 0;
+    top: 0;
+}
+
+.results__selected-filters.r4r-DEFAULT {
+    margin: 20px 0;
+    display: flex;
+}
+
+.results__filter-button {
+    display: none;
+}
+
+.results__main.r4r-DEFAULT {
+    display: flex;
+    border-top: 1px solid #7d7d7d;
+    padding-top: 40px;
+    border-bottom: 1px solid #7d7d7d;
+}
+
+
+.results__facets.r4r-DEFAULT {
+    width: 320px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.facet__box.r4r-DEFAULT {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 0 0 3px 3px;
+    display: flex;
+    flex-flow: column nowrap;
+    box-shadow: 0 4px 9px -1px rgba(0,0,0,0.3);
+}
+
+.facet__title.r4r-DEFAULT {
+    background: #2a71a5;
+    color: white;
+    padding: 10px;
+    border-radius: 3px 3px 0 0;
+}
+
+.facet__box .facet__filter.r4r-DEFAULT{
+    margin: 3px 0;
+}
+
+.facet__filter.r4r-DEFAULT {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+/* Tooltypes aren't really a checkbox, we disguise that with styling */
+.facet__box.facet__box--tool-types input.filter__checkbox + .filter__label.r4r-DEFAULT .checkbox__outline {
+    display: none;
+}
+
+.facet__box.facet__box--tool-types input.filter__checkbox:checked + .filter__label .filter__close {
+    display: flex;
+}
+
+.facet__box.facet__box--tool-types .filter__label.r4r-DEFAULT {
+    color: #169bd5;
+}
+
+.facet__box.facet__box--tool-types .filter__label.r4r-DEFAULT:hover {
+    text-decoration: underline;
+}
+
+.facet__box.facet__box--tool-types .filter__label.r4r-DEFAULT:active {
+    color: #0e5f82;
+}
+
+.results-container.r4r-DEFAULT {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.results-container.r4r-DEFAULT .result-tile.r4r-DEFAULT {
+    margin: 0 40px 40px 40px;
+}
+
+.r4r-results .searchbar__container {
+    margin: 20px 0;
+}
+
+/* TODO: The rules for other components should be moved to the appropriate file */
+@media only screen and (max-width: 1024px) {
+
+    .r4r-results .results__header {
+        padding: 0;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .results__search-container.r4r-DEFAULT{
+        display: flex;
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .results__filter-button.r4r-DEFAULT {
+        display: block;
+        width: 130px;
+        height: auto;
+        font-size: 16px;
+        background-color: #2a71a5;
+        color: white;
+        cursor: pointer;
+        transition: background-color .3s ease-out;
+    }
+
+    .results__filter-button.r4r-DEFAULT:hover {
+        background-color: #266594;
+    }
+
+    .results__filter-button.r4r-DEFAULT:focus {
+        background-color: #266594;
+    }
+
+    
+    .results__search-container.r4r-DEFAULT .results__filter-button.r4r-DEFAULT {
+        margin-left: 30px;
+    }
+
+    .r4r-results  .searchbar__container {
+        width: auto;
+        flex: 1;
+        margin: 0;
+    }
+
+    .results__main .results__facets.r4r-DEFAULT {
+        display: none;
+    }
+
+    .results__facets.r4r-DEFAULT {
+        width: 100%;
+        margin: 0 auto;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .results__facets .facet__box.r4r-DEFAULT {
+        min-width: 300px;
+        flex: 1;
+        margin-left: 4px;
+        margin-right: 4px;
+        height: auto;
+    }
+
+    .results__selected-filters.r4r-DEFAULT {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    
+    .results-container.r4r-DEFAULT .result-tile.r4r-DEFAULT {
+        margin: 0 15px 40px 15px;
+    }
+}
+
+@media only screen and (max-width: 640px){
+
+    .results__search-container.r4r-DEFAULT{
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .r4r-results  .searchbar__container{
+        flex: none;
+    }
+
+    .results__filter-button.r4r-DEFAULT{
+        width: 100%;
+        margin: 0;
+        height: 40px;
+    }
+
+    .results__search-container.r4r-DEFAULT .results__filter-button.r4r-DEFAULT{
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .results__selected-filters.r4r-DEFAULT{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .r4r-pager.r4r-DEFAULT {
+        display: block;
+    }
+
+    .r4r-pager__count.r4r-DEFAULT{
+        display: flex; 
+        justify-content: center;
+        margin-bottom: .6em;
+    }
+
+    .r4r-pager__nav.r4r-DEFAULT:not(:first-child){
+        padding-top: 0.6em;
+        border-top: 1px solid #777;
+    }
+
+}

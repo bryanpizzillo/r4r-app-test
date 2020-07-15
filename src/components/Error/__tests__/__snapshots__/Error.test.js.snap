@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Component renders correctly 1`] = `
+<Theme
+  className="r4r-error"
+  element="div"
+>
+  <h1>
+    Error
+  </h1>
+  <p>
+    A system error occured or your request timed out. Please try refreshing the page
+  </p>
+</Theme>
+`;

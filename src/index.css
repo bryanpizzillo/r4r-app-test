@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+html, body, #r4r-root {
+  height: 100%;
+  width: 100%;
+}
+
+.r4r-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.r4r-container.r4r-DEFAULT {
+  padding: 10px;
+}
+
+.r4r-container.r4r-DEFAULT h1 {
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+
+.r4r-container h2 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.r4r-container.r4r-DEFAULT h3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.r4r-container.r4r-DEFAULT p {
+  line-height: 1.35em;
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.r4r-container.r4r-DEFAULT a {
+  text-decoration-line: none;
+  color: #169BD5;
+}
+
+.r4r-container.r4r-DEFAULT a:active {
+  color: #169BD5;
+}
+
+.r4r-container.r4r-DEFAULT address {
+  font-style: initial;
+}
+
+.r4r-hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
