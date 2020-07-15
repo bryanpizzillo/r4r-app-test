@@ -88,6 +88,7 @@ jobs:
       ## package.json and make the package. So the version number
       ## should no longer matter in the repo's package.json.
       - name: Publish
+        continue-on-error: false
         uses: mikeal/merge-release@v4.0.26
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
