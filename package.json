@@ -1,5 +1,5 @@
 {
-  "name": "@nciocpl/r4r-app",
+  "name": "@bryanpizzillo/r4r-app-test",
   "version": "2.0.1",
   "main": "build/static/js/main.js",
   "publishConfig": {
