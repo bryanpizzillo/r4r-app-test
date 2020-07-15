@@ -93,6 +93,7 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:
