@@ -87,13 +87,18 @@ jobs:
       ## get the next version from repository, and then locally modify
       ## package.json and make the package. So the version number
       ## should no longer matter in the repo's package.json.
+      - name: Use Node.js 12.x
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          scope: '@bryanpizzillo'
+          registry-url: 'https://npm.pkg.github.com'
       - name: Publish
-        continue-on-error: false
-        uses: mikeal/merge-release@v4.0.26
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm publish
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:
